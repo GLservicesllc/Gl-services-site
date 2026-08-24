@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>G&L Services | Rexburg Property Maintenance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Inter:wght@400;500;600&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wordmark">G&amp;L <span>SERVICES</span></div>
+    <nav class="site-nav">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="hero" class="hero">
+    <div class="ticket-meta">REXBURG, ID &mdash; LICENSED &amp; INSURED &mdash; R&amp;L ENTERPRISES DBA</div>
+    <h1>Reliable Handyman Maintenance<br>for Rexburg Rentals</h1>
+    <p>Fast turnarounds. Fair pricing. Built for property managers who need work done right the first time.</p>
+    <a href="#contact" class="cta-button">Get a Quote</a>
+  </section>
+
+  <div class="tear-line" aria-hidden="true"></div>
+
+  <section id="services" class="services">
+    <p class="section-label">Punch List</p>
+    <h2>Services</h2>
+    <ul class="checklist">
+      <li>General repairs</li>
+      <li>Turnover maintenance</li>
+      <li>Drywall &amp; painting</li>
+      <li>Plumbing fixes</li>
+      <li>Emergency call-outs</li>
+    </ul>
+  </section>
+
+  <div class="tear-line" aria-hidden="true"></div>
+
+  <section id="about" class="about">
+    <p class="section-label">Work Order</p>
+    <h2>Why G&amp;L Services</h2>
+    <p>We know the BYU-Idaho student housing market. We move fast between tenant turnovers and keep your properties in shape year-round.</p>
+  </section>
+
+  <div class="tear-line" aria-hidden="true"></div>
+
+  <section id="contact" class="contact">
+    <p class="section-label">Request Service</p>
+    <h2>Get in Touch</h2>
+    <form id="contactForm" action="https://formspree.io/f/xdenrgyk" method="POST" novalidate>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name">
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email">
+
+      <label for="message">What do you need done?</label>
+      <textarea id="message" name="message" rows="4"></textarea>
+
+      <button type="submit">Send</button>
+
+      <p id="formStatus" role="status"></p>
+    </form>
+  </section>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 G&amp;L Services, a DBA of R&amp;L Enterprises. Rexburg, ID.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

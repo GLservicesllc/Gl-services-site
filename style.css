@@ -1,0 +1,310 @@
+/* ---------- Design tokens ---------- */
+:root {
+  --color-bg: #ECEAE4;
+  --color-bg-panel: #DFDBD0;
+  --color-ink: #22262B;
+  --color-ink-soft: #565C61;
+  --color-steel: #3D5A6C;
+  --color-rust: #B5502F;
+  --color-rust-dark: #8F3E23;
+  --color-safety: #E8B33D;
+
+  --font-display: 'Oswald', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+}
+
+/* ---------- Reset-ish basics ---------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  line-height: 1.55;
+}
+
+h1, h2 {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--color-ink);
+  margin: 0 0 0.5em 0;
+}
+
+a {
+  color: var(--color-steel);
+}
+
+/* Visible focus state for keyboard users */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--color-safety);
+  outline-offset: 2px;
+}
+
+/* ---------- Header ---------- */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 2rem;
+  background: var(--color-ink);
+}
+
+.wordmark {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-bg);
+  letter-spacing: 0.04em;
+}
+
+.wordmark span {
+  color: var(--color-safety);
+}
+
+.site-nav a {
+  color: var(--color-bg);
+  text-decoration: none;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-left: 1.75rem;
+}
+
+.site-nav a:hover {
+  color: var(--color-safety);
+}
+
+/* ---------- Section label (the "stamped" ticket field name) ---------- */
+.section-label {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-rust);
+  margin: 0 0 0.5rem 0;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 4rem 2rem 3rem 2rem;
+  text-align: left;
+}
+
+/* Blueprint-style corner registration marks */
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border: 2px solid var(--color-steel);
+  opacity: 0.6;
+}
+
+.hero::before {
+  top: 1.5rem;
+  left: 0.5rem;
+  border-right: none;
+  border-bottom: none;
+}
+
+.hero::after {
+  top: 1.5rem;
+  right: 0.5rem;
+  border-left: none;
+  border-bottom: none;
+}
+
+.ticket-meta {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: var(--color-ink-soft);
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.05rem;
+  color: var(--color-ink-soft);
+  max-width: 46ch;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  display: inline-block;
+  background: var(--color-rust);
+  color: #fff;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.85rem;
+  text-decoration: none;
+  padding: 0.9rem 1.75rem;
+  border-radius: 2px;
+  transition: background 0.15s ease;
+}
+
+.cta-button:hover {
+  background: var(--color-rust-dark);
+}
+
+/* ---------- Tear-line divider ---------- */
+.tear-line {
+  max-width: 760px;
+  margin: 0 auto;
+  border-top: 2px dashed #B9B4A6;
+}
+
+/* ---------- Services (checklist) ---------- */
+.services,
+.about,
+.contact {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.checklist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.checklist li {
+  position: relative;
+  padding-left: 2.1rem;
+  margin-bottom: 0.9rem;
+  font-size: 1.05rem;
+}
+
+.checklist li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.15em;
+  width: 1.1rem;
+  height: 1.1rem;
+  border: 2px solid var(--color-steel);
+  border-radius: 2px;
+}
+
+/* ---------- About ---------- */
+.about p {
+  color: var(--color-ink-soft);
+  max-width: 60ch;
+  font-size: 1.05rem;
+}
+
+/* ---------- Contact form ---------- */
+.contact {
+  background: var(--color-bg-panel);
+  border: 1px solid #C9C4B6;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  max-width: 480px;
+}
+
+.contact label {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-ink-soft);
+  margin-top: 1rem;
+  margin-bottom: 0.35rem;
+}
+
+.contact input,
+.contact textarea {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  padding: 0.6rem 0.7rem;
+  border: 1px solid #B9B4A6;
+  border-radius: 2px;
+  background: #fff;
+  color: var(--color-ink);
+}
+
+.contact button {
+  align-self: flex-start;
+  margin-top: 1.5rem;
+  background: var(--color-steel);
+  color: #fff;
+  border: none;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.85rem;
+  padding: 0.9rem 1.75rem;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.contact button:hover {
+  background: #2E4453;
+}
+
+#formStatus {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  margin-top: 1rem;
+  min-height: 1.2em;
+}
+
+#formStatus.error {
+  color: var(--color-rust-dark);
+}
+
+#formStatus.success {
+  color: #2E6B4F;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  text-align: center;
+  padding: 2rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-ink-soft);
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 600px) {
+  .site-header {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: flex-start;
+  }
+
+  .site-nav a {
+    margin-left: 0;
+    margin-right: 1.25rem;
+  }
+
+  .hero h1 {
+    font-size: 1.9rem;
+  }
+}
