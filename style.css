@@ -1,13 +1,26 @@
 /* ---------- Design tokens ---------- */
 :root {
-  --color-bg: #ECEAE4;
-  --color-bg-panel: #DFDBD0;
-  --color-ink: #22262B;
-  --color-ink-soft: #565C61;
-  --color-steel: #3D5A6C;
-  --color-rust: #B5502F;
-  --color-rust-dark: #8F3E23;
-  --color-safety: #E8B33D;
+  --color-bg: #E8EFE7;
+  --color-bg-panel: #D9E3D7;
+  --color-bg-header: #14140F;
+  --color-ink: #14140F;
+  --color-ink-soft: #4A554C;
+  --color-border: #B9C7B6;
+
+  --color-forest: #456153;
+  --color-forest-deep: #324838;
+  --color-forest-darker: #22331F;
+  --color-forest-bright: #456153;
+  --color-forest-bright-dark: #324838;
+  --color-forest-on-dark: #7FCB9C;
+
+  --color-safety: #C7841F;
+  --color-error: #B3402A;
+  --color-success: #3D6B4A;
+
+  --color-input-bg: #FFFFFF;
+  --color-input-text: #14140F;
+  --color-input-border: #B9C7B6;
 
   --font-display: 'Oswald', sans-serif;
   --font-body: 'Inter', sans-serif;
@@ -36,7 +49,7 @@ h1, h2 {
 }
 
 a {
-  color: var(--color-steel);
+  color: var(--color-forest);
 }
 
 /* Visible focus state for keyboard users */
@@ -48,25 +61,117 @@ textarea:focus-visible {
   outline-offset: 2px;
 }
 
-/* ---------- Header ---------- */
-.site-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.25rem 2rem;
-  background: var(--color-ink);
-}
-
 .wordmark {
   font-family: var(--font-display);
   font-size: 1.4rem;
   font-weight: 700;
   color: var(--color-bg);
   letter-spacing: 0.04em;
+  text-decoration: none;
 }
 
 .wordmark span {
-  color: var(--color-safety);
+  color: var(--color-forest-on-dark);
+}
+
+/* ---------- Sub-page hero (Services / Pricing pages) ---------- */
+.hero--page {
+  padding-top: 3rem;
+  padding-bottom: 2.5rem;
+}
+
+.hero--page::before,
+.hero--page::after {
+  display: none;
+}
+
+.hero--page h1 {
+  font-size: 2.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.hero--page p {
+  color: var(--color-ink-soft);
+  max-width: 55ch;
+  font-size: 1.05rem;
+}
+
+/* ---------- Services detail page ---------- */
+.services-detail {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 1rem 2rem 3rem 2rem;
+}
+
+.service-block {
+  padding: 1.75rem 0;
+}
+
+.service-block h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.6rem;
+}
+
+.service-block p {
+  color: var(--color-ink-soft);
+  max-width: 62ch;
+  margin: 0;
+}
+
+.tear-line--sub {
+  max-width: 760px;
+  opacity: 0.6;
+}
+
+.services-cta {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem;
+  text-align: left;
+}
+
+.services-cta p {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-size: 1.1rem;
+  margin: 0 0 0.75rem 0;
+}
+
+.services-cta .cta-button {
+  margin-left: 0.5rem;
+}
+
+/* ---------- Pricing detail page ---------- */
+.pricing--page {
+  padding-top: 1rem;
+}
+
+.pricing-faq {
+  margin: 2.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.pricing-faq-item h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+}
+
+.pricing-faq-item p {
+  color: var(--color-ink-soft);
+  max-width: 62ch;
+  margin: 0;
+}
+
+/* ---------- Header ---------- */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 2rem;
+  background: var(--color-bg-header);
 }
 
 .site-nav a {
@@ -80,7 +185,7 @@ textarea:focus-visible {
 }
 
 .site-nav a:hover {
-  color: var(--color-safety);
+  color: var(--color-forest-on-dark);
 }
 
 /* ---------- Section label (the "stamped" ticket field name) ---------- */
@@ -89,7 +194,7 @@ textarea:focus-visible {
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  color: var(--color-rust);
+  color: var(--color-forest-bright);
   margin: 0 0 0.5rem 0;
 }
 
@@ -109,7 +214,7 @@ textarea:focus-visible {
   position: absolute;
   width: 22px;
   height: 22px;
-  border: 2px solid var(--color-steel);
+  border: 2px solid var(--color-forest);
   opacity: 0.6;
 }
 
@@ -151,8 +256,8 @@ textarea:focus-visible {
 
 .cta-button {
   display: inline-block;
-  background: var(--color-rust);
-  color: #fff;
+  background: var(--color-forest-bright);
+  color: var(--color-bg);
   font-family: var(--font-mono);
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -164,14 +269,14 @@ textarea:focus-visible {
 }
 
 .cta-button:hover {
-  background: var(--color-rust-dark);
+  background: var(--color-forest-bright-dark);
 }
 
 /* ---------- Tear-line divider ---------- */
 .tear-line {
   max-width: 760px;
   margin: 0 auto;
-  border-top: 2px dashed #B9B4A6;
+  border-top: 2px dashed var(--color-border);
 }
 
 /* ---------- Services (checklist) ---------- */
@@ -203,21 +308,188 @@ textarea:focus-visible {
   top: 0.15em;
   width: 1.1rem;
   height: 1.1rem;
-  border: 2px solid var(--color-steel);
+  border: 2px solid var(--color-forest);
   border-radius: 2px;
 }
 
+.checklist--detailed li {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.4rem;
+}
+
+.checklist-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-size: 1.05rem;
+}
+
+.checklist-desc {
+  color: var(--color-ink-soft);
+  font-size: 0.95rem;
+  margin-top: 0.2rem;
+}
+
+/* ---------- Pricing ---------- */
+.pricing-intro {
+  color: var(--color-ink-soft);
+  margin-bottom: 1.75rem;
+}
+
+.pricing-cards {
+  display: flex;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.pricing-card {
+  background: var(--color-bg-panel);
+  border: 1px solid var(--color-border);
+  border-radius: 2px;
+  padding: 1.5rem 2rem;
+  text-align: center;
+  flex: 1;
+  min-width: 160px;
+}
+
+.pricing-rate {
+  font-family: var(--font-display);
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--color-forest);
+  margin: 0;
+}
+
+.pricing-rate span {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-ink-soft);
+}
+
+.pricing-label {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-ink-soft);
+  margin: 0.4rem 0 0 0;
+}
+
+.cta-button--outline {
+  background: transparent;
+  border: 2px solid var(--color-forest-bright);
+  color: var(--color-forest-bright);
+}
+
+.cta-button--outline:hover {
+  background: var(--color-forest-bright);
+  color: var(--color-bg);
+}
+
+.text-link {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-forest);
+  text-decoration: none;
+  margin-top: 0.5rem;
+  margin-right: 1.5rem;
+}
+
+.text-link:hover {
+  color: var(--color-forest-bright);
+}
+
 /* ---------- About ---------- */
-.about p {
+.about-intro {
   color: var(--color-ink-soft);
   max-width: 60ch;
   font-size: 1.05rem;
+  margin-bottom: 2rem;
+}
+
+.reasons {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.75rem 2rem;
+}
+
+.reasons li {
+  position: relative;
+  padding-left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.reasons li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.35em;
+  width: 8px;
+  height: 8px;
+  background: var(--color-forest-bright);
+  border-radius: 1px;
+  transform: rotate(45deg);
+}
+
+.reasons-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-size: 1rem;
+}
+
+.reasons-desc {
+  color: var(--color-ink-soft);
+  font-size: 0.95rem;
+  margin-top: 0.25rem;
 }
 
 /* ---------- Contact form ---------- */
 .contact {
   background: var(--color-bg-panel);
-  border: 1px solid #C9C4B6;
+  border: 1px solid var(--color-border);
+}
+
+.contact-info {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px dashed var(--color-border);
+}
+
+.contact-info p {
+  margin: 0.4rem 0;
+  font-size: 1rem;
+}
+
+.contact-info-label {
+  display: inline-block;
+  width: 110px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-forest-bright);
+}
+
+.contact-info a {
+  color: var(--color-ink);
+  text-decoration: none;
+  font-family: var(--font-mono);
+}
+
+.contact-info a:hover {
+  color: var(--color-forest);
 }
 
 .contact form {
@@ -241,16 +513,16 @@ textarea:focus-visible {
   font-family: var(--font-body);
   font-size: 1rem;
   padding: 0.6rem 0.7rem;
-  border: 1px solid #B9B4A6;
+  border: 1px solid var(--color-input-border);
   border-radius: 2px;
-  background: #fff;
-  color: var(--color-ink);
+  background: var(--color-input-bg);
+  color: var(--color-input-text);
 }
 
 .contact button {
   align-self: flex-start;
   margin-top: 1.5rem;
-  background: var(--color-steel);
+  background: var(--color-forest-deep);
   color: #fff;
   border: none;
   font-family: var(--font-mono);
@@ -264,7 +536,7 @@ textarea:focus-visible {
 }
 
 .contact button:hover {
-  background: #2E4453;
+  background: var(--color-forest-darker);
 }
 
 #formStatus {
@@ -275,11 +547,11 @@ textarea:focus-visible {
 }
 
 #formStatus.error {
-  color: var(--color-rust-dark);
+  color: var(--color-error);
 }
 
 #formStatus.success {
-  color: #2E6B4F;
+  color: var(--color-success);
 }
 
 /* ---------- Footer ---------- */
@@ -306,5 +578,19 @@ textarea:focus-visible {
 
   .hero h1 {
     font-size: 1.9rem;
+  }
+
+  .pricing-cards {
+    flex-direction: column;
+  }
+
+  .contact-info-label {
+    display: block;
+    width: auto;
+    margin-bottom: 0.15rem;
+  }
+
+  .reasons {
+    grid-template-columns: 1fr;
   }
 }

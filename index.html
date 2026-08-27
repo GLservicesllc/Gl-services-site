@@ -11,16 +11,17 @@
 <body>
 
   <header class="site-header">
-    <div class="wordmark">G&amp;L <span>SERVICES</span></div>
+    <a href="index.html" class="wordmark">G&amp;L <span>SERVICES</span></a>
     <nav class="site-nav">
-      <a href="#services">Services</a>
+      <a href="services.html">Services</a>
+      <a href="pricing.html">Pricing</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <section id="hero" class="hero">
-    <div class="ticket-meta">REXBURG, ID &mdash; LICENSED &amp; INSURED &mdash; R&amp;L ENTERPRISES DBA</div>
+    <div class="ticket-meta">SERVING REXBURG &middot; SUGAR CITY &middot; RIGBY &middot; IDAHO FALLS &mdash; G&amp;L SERVICES</div>
     <h1>Reliable Handyman Maintenance<br>for Rexburg Rentals</h1>
     <p>Fast turnarounds. Fair pricing. Built for property managers who need work done right the first time.</p>
     <a href="#contact" class="cta-button">Get a Quote</a>
@@ -38,6 +39,27 @@
       <li>Plumbing fixes</li>
       <li>Emergency call-outs</li>
     </ul>
+    <a href="services.html" class="text-link">See full service details &rarr;</a>
+  </section>
+
+  <div class="tear-line" aria-hidden="true"></div>
+
+  <section id="pricing" class="pricing">
+    <p class="section-label">Rate Sheet</p>
+    <h2>Pricing</h2>
+    <p class="pricing-intro">Straightforward rates, no surprise fees. Quotes are always free.</p>
+    <div class="pricing-cards">
+      <div class="pricing-card">
+        <p class="pricing-rate">$65<span>/hr</span></p>
+        <p class="pricing-label">One technician</p>
+      </div>
+      <div class="pricing-card">
+        <p class="pricing-rate">$125<span>/hr</span></p>
+        <p class="pricing-label">Two technicians</p>
+      </div>
+    </div>
+    <a href="pricing.html" class="text-link">See full rate sheet &rarr;</a>
+    <a href="#contact" class="cta-button cta-button--outline">Request a Free Quote</a>
   </section>
 
   <div class="tear-line" aria-hidden="true"></div>
@@ -45,7 +67,26 @@
   <section id="about" class="about">
     <p class="section-label">Work Order</p>
     <h2>Why G&amp;L Services</h2>
-    <p>We know the BYU-Idaho student housing market. We move fast between tenant turnovers and keep your properties in shape year-round.</p>
+    <p class="about-intro">We know the BYU-Idaho student housing market inside and out, and we built G&amp;L Services around what property managers actually need: speed, reliability, and no run-around.</p>
+
+    <ul class="reasons">
+      <li>
+        <span class="reasons-title">We know student housing turnover</span>
+        <span class="reasons-desc">Tight windows between leases, high move-out volume every spring and fall &mdash; we're built for that rhythm, not surprised by it.</span>
+      </li>
+      <li>
+        <span class="reasons-title">Fast response</span>
+        <span class="reasons-desc">A maintenance request that sits for a week costs you a tenant complaint. We move quickly on both routine work and emergencies.</span>
+      </li>
+      <li>
+        <span class="reasons-title">Straightforward pricing</span>
+        <span class="reasons-desc">Flat hourly rates, no hidden fees, no surprise invoices. You know the cost before we start.</span>
+      </li>
+      <li>
+        <span class="reasons-title">One point of contact</span>
+        <span class="reasons-desc">Call, text, or email and you'll hear back from us directly &mdash; not a call center or a rotating cast of subcontractors.</span>
+      </li>
+    </ul>
   </section>
 
   <div class="tear-line" aria-hidden="true"></div>
@@ -53,6 +94,13 @@
   <section id="contact" class="contact">
     <p class="section-label">Request Service</p>
     <h2>Get in Touch</h2>
+
+    <div class="contact-info">
+      <p><span class="contact-info-label">Phone</span><a href="tel:12082230644">208-223-0644</a> &middot; <a href="tel:19703673704">970-367-3704</a></p>
+      <p><span class="contact-info-label">Hours</span>Mon&ndash;Sat, 8am&ndash;8pm</p>
+      <p><span class="contact-info-label">Service Area</span>Rexburg, Sugar City, Rigby, Idaho Falls</p>
+    </div>
+
     <form id="contactForm" action="https://formspree.io/f/xdenrgyk" method="POST" novalidate>
       <label for="name">Name</label>
       <input type="text" id="name" name="name">
