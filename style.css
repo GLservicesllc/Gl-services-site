@@ -165,6 +165,56 @@ textarea:focus-visible {
   margin: 0;
 }
 
+/* ---------- Licensed / Credentials page ---------- */
+.credentials {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 1rem 2rem 3rem 2rem;
+}
+
+.credential-block {
+  padding: 1.75rem 0;
+}
+
+.credential-block h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.6rem;
+}
+
+.credential-block p {
+  color: var(--color-ink-soft);
+  max-width: 62ch;
+  margin: 0 0 1rem 0;
+}
+
+.credential-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.credential-list li {
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px dashed var(--color-border);
+  font-size: 0.95rem;
+}
+
+.credential-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-forest-bright);
+  min-width: 130px;
+}
+
+.credential-fill {
+  color: var(--color-ink-soft);
+  font-style: italic;
+}
+
 /* ---------- Header ---------- */
 .site-header {
   display: flex;
